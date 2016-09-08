@@ -3,8 +3,6 @@ var request = require('request');
 var addressModel = module.exports;
 
 addressModel.convertAddress = function(params, res) {
-  // console.log(params);
-  console.log(params)
   var options = {
     method: 'GET',
     url: 'https://maps.googleapis.com/maps/api/geocode/json',
