@@ -13,9 +13,8 @@ searchModel.getAllDishNames = function() {
 }
 
 searchModel.getTopRestaurant = function(params) {
-	return db('Dishes')
-		.innerJoin('Locations', 'Locations.id','Dishes.location_id')
-		.innerJoin('Restaurants','Restaurants.id', 'Dishes.restaurant_id')
+	console.log('')
+	return db('Restaurants')
 	.where({
 		"Dishes.dish_name":params.dish_name,
 		"Locations.location_name":params.location_name

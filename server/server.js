@@ -13,7 +13,8 @@ var googleLocation = require('./router/googleLocation.js');
 var photoRouter = require('./router/photoRouter.js');
 
 app.use(cors());
-app.use(bodyParse.json({limit: '50mb'}));
+app.use(bodyParse.urlencoded({extended:false}));
+app.use(bodyParse.json());
 
 app.use(express.static('./client'));
 

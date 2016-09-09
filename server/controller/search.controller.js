@@ -5,6 +5,7 @@ exports.search = {
 }
 
 function getTopRestaurant(req, res) {
+	console.log('inside search.controller', req.body)
 	searchModel.getTopRestaurant(req.body)
 	.then(function(result) {
 		res.status(200).send(result)
